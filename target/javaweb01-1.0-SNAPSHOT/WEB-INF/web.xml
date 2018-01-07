@@ -9,7 +9,27 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
+<!--    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>com.cosyit.servlet.MyServlet</servlet-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/mumu</url-pattern>
+    </servlet-mapping>-->
     <session-config>
         <session-timeout>30</session-timeout> <!-- 单位分钟 过期-->
     </session-config>
+
+<!--<jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <scripting-invalid>true</scripting-invalid>
+        </jsp-property-group>
+    </jsp-config>-->
 </web-app>

@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
 
-@WebServlet(initParams = {
+@WebServlet(name="MyServlet",initParams = {
         @WebInitParam(name = "myload", value = "king"),
         @WebInitParam(name = "namedada", value = "wanglaoji")},
         urlPatterns = {"/helloWorld", "/worldHello"})
@@ -44,7 +44,7 @@ public class MyServlet extends HttpServlet{
         //下次请求web客户端再把这个唯一标识再提交过来。
         // servlet容器会自动选择方式【1 or 2】传递会话标识。
 
-        //页面区。${name}   <%= session.getAttribute("name") %>
+        //页面区。${Object.field}   <%= session.getAttribute("name") %>
         session.getAttribute("name");
 
 
@@ -93,7 +93,6 @@ public class MyServlet extends HttpServlet{
         servletRequest.getSession();//servletRequest.getSession(false);//如果你没有，就不再创建新的会话。
         servletRequest.getCookies();
         servletRequest.getPathInfo();
-
 
         servletResponse.addCookie(new Cookie("name","value"));
         servletResponse.sendRedirect("");
